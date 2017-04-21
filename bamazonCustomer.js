@@ -78,7 +78,8 @@ function userBuy() {
                     connection.query("UPDATE products SET stock_quantity=? WHERE id=?", [unitsLeft, id], function (err, res) {
                         if (err) throw err;
                     });
-                    console.log("Your order id complete.  You have been charged $" + charge + ". Thank you for shopping with" +
+                    console.log("Your order is complete.  You have been charged $" + charge + ". Thank you for" +
+                        " shopping with" +
                         " Bamozon!");
                 } else {
                     console.log('Insufficient quantity!  Only ' + res[i].stock_quantity + ' avalable.');
